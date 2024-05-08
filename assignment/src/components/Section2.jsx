@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
 import AudioPlayer from "./Audioplayer";
 import One from "../assets/One.wav";
+import Six from "../assets/Six.wav";
+import Waveform from "./Waveform";
 
 const Section2 = () => {
   const [selectedAnomaly, setSelectedAnomaly] = useState("");
@@ -34,12 +35,8 @@ const Section2 = () => {
             <AudioPlayer src={One} />
           </div>
 
-          <div className="flex flex-col items-end justify-between">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/7f70/a6bb/64a5e6a2bdaf5c7e9e5e6bcc31c87590?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TuLc4vgVbfGpvk9CcaMVVkE85Q3EWi7ABWRbCE7O0MZ4oTjWnsExUjY~6Nh3QxH8fUsN-3ITUylOiHNyyfWc0RZMj88L5xOwPlKYovz2TzJB410Y~6CpYdSLPK~8kcCXJSOVdI-xi82dS0wn268fPicMU75l54EV7pobP65mr0U8xCwLk-DnJSK9~Q6JUpelDcAHl36doYXD3ztB~5r1zhUQcmQ-Ix8qtljvLssgJCjICJHMJ6wRybX0V0WibUsnW8ztc~TJ5K3TC2a20Z8Xh4hdpP76UfByhxXlEZuQQhlwpTaU1UCicmuBGylBTUVIpGVJrqsOhXyHGQ~nmehQxw__"
-              alt=""
-              className="w-[391px] h-[144px] my-1"
-            />
+          <div className="flex flex-col justify-between items-end my-2">
+            <Waveform audioFile={One} />
             <img
               src="https://s3-alpha-sig.figma.com/img/969a/8654/96c64c1034791d3b065ee7c97fa22e35?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lwYiBPNx9JeaXUDXot8v2mIxPPdKbvRZg6t~BDs4KyBDna-1yr8i2u~5U5ra02t1wYykHp51uxJxLvJsDB2uF8Hztl8SAk7WsKuCjYEdGRrs6FUchJsmQkkJrF18eh~lZ9mBEzxj8OIklKoqR8DPNRqykuT0OKU28W84-hqbjY08Ssb~jmCb5tCIg3gRSc2OILXim0tBQgcPZpEmlUnr7Bis4JsO1NirFB5mam6iPbBTvbJJkHjU3tpmjh1pnHKZrrwJEDilakZAk5K3QjJsz49qUb9Z9T7xiY55iRjecQinXjpsdjLe8OUJvrnIP7sbU-cjW4V4hUDI9QVF6oinTA__"
               alt=""
@@ -50,14 +47,12 @@ const Section2 = () => {
 
         <div className="">
           <div className="mt-2 mx-8">
-            <span>Anomaly Machine Output</span>
+            <span>Normal Machine Output</span>
+            <AudioPlayer src={Six} />
           </div>
-          <div className="flex flex-col items-end justify-between pl-2">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/7f70/a6bb/64a5e6a2bdaf5c7e9e5e6bcc31c87590?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TuLc4vgVbfGpvk9CcaMVVkE85Q3EWi7ABWRbCE7O0MZ4oTjWnsExUjY~6Nh3QxH8fUsN-3ITUylOiHNyyfWc0RZMj88L5xOwPlKYovz2TzJB410Y~6CpYdSLPK~8kcCXJSOVdI-xi82dS0wn268fPicMU75l54EV7pobP65mr0U8xCwLk-DnJSK9~Q6JUpelDcAHl36doYXD3ztB~5r1zhUQcmQ-Ix8qtljvLssgJCjICJHMJ6wRybX0V0WibUsnW8ztc~TJ5K3TC2a20Z8Xh4hdpP76UfByhxXlEZuQQhlwpTaU1UCicmuBGylBTUVIpGVJrqsOhXyHGQ~nmehQxw__"
-              alt=""
-              className="w-[391px] h-[144px] my-1"
-            />
+
+          <div className="flex flex-col justify-between items-end my-2">
+            <Waveform audioFile={Six} />
             <img
               src="https://s3-alpha-sig.figma.com/img/969a/8654/96c64c1034791d3b065ee7c97fa22e35?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lwYiBPNx9JeaXUDXot8v2mIxPPdKbvRZg6t~BDs4KyBDna-1yr8i2u~5U5ra02t1wYykHp51uxJxLvJsDB2uF8Hztl8SAk7WsKuCjYEdGRrs6FUchJsmQkkJrF18eh~lZ9mBEzxj8OIklKoqR8DPNRqykuT0OKU28W84-hqbjY08Ssb~jmCb5tCIg3gRSc2OILXim0tBQgcPZpEmlUnr7Bis4JsO1NirFB5mam6iPbBTvbJJkHjU3tpmjh1pnHKZrrwJEDilakZAk5K3QjJsz49qUb9Z9T7xiY55iRjecQinXjpsdjLe8OUJvrnIP7sbU-cjW4V4hUDI9QVF6oinTA__"
               alt=""
